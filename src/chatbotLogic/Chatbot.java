@@ -14,12 +14,11 @@ public class Chatbot {
     public static void main(String[] args) throws Exception {
         ManagerChat mc = new ManagerChat();
         MyFrame myframe = new MyFrame(mc);
-       
-		try {
-			myframe.appendResponse(mc.starting()+"\n");
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
+
+        try {
+            myframe.appendResponse(mc.starting() + "\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+}

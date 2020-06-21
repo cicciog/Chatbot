@@ -1,11 +1,7 @@
 package chatbotLogic;
 
-import GUI.MyFrame;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.Vector;
-import jdk.nashorn.internal.parser.TokenType;
 
 /**
  *
@@ -13,15 +9,15 @@ import jdk.nashorn.internal.parser.TokenType;
  */
 public class ManagerChat {
 
-    private static String input = new String("");
-    private static String response = new String("");
-    private static String previousInput = new String("");
-    private static String previousResponse = new String("");
-    private static String event = new String("");
-    private static String previousEvent = new String("");
-    private static String inputBackup = new String("");
-    private static String subject = new String("");
-    private static String keyWord = new String("");
+    private static String input = "";
+    private static String response = "";
+    private static String previousInput = "";
+    private static String previousResponse = "";
+    private static String event = "";
+    private static String previousEvent = "";
+    private static String inputBackup = "";
+    private static String subject = "";
+    private static String keyWord = "";
     private static boolean quitProgram = false;
 
     private static Knowledgebase kb = new Knowledgebase();
@@ -80,10 +76,10 @@ public class ManagerChat {
         return quitProgram;
     }
 
-    //Effettua una ricerca dell'input dello user nella base di conoscenza
+    //Effettua una ricerca dell'input dell'utente nella base di conoscenza
     public static void findMatching() {
         responseList.clear();
-        // Supporta il processo di classificazione delle parole chiavi durante il processo di confronto
+        // Supporta il processo di classificazione delle parole chiave durante il processo di confronto
         String bestKeyWord = "";
         Vector<Integer> indexVector = new Vector<Integer>(maxResponse);
 
